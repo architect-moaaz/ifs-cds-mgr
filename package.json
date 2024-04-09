@@ -1,0 +1,44 @@
+{
+  "name": "ifs-cds-mgr",
+  "version": "1.0.0",
+  "description": "Intelliflow CDS Manager",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx webpack",
+    "prestart": "npm i",
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js",
+    "start:dev-windows": "set NODE_ENV=development && nodemon app.js",
+    "start:prod": "export NODE_ENV=production && nodemon app.js",
+    "start:prod-windows": "set NODE_ENV=production && nodemon app.js",
+    "start:colo": "export NODE_ENV=colo && node app.js",
+    "start:colo-windows": "set NODE_ENV=colo && nodemon app.js",
+    "start:uat": "export NODE_ENV=uat && nodemon app.js",
+    "start:uat-windows": "set NODE_ENV=uat && nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.9",
+    "multer": "^1.3.0",
+    "multer-gridfs-storage": "^3.0.0",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "dotenv-webpack": "^8.0.1",
+    "nodemon": "^1.17.1",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
